@@ -47,6 +47,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ---
 ### Let's use typescript for this project
+
+![ref app.png](./public/app.png)
+
 ---
 > Let's use typescript for this project
 [ref Adding TypeScript](https://create-react-app.dev/docs/adding-typescript)
