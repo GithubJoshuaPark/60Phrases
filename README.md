@@ -44,3 +44,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+---
+### Let's use typescript for this project
+---
+> Let's use typescript for this project
+[ref Adding TypeScript](https://create-react-app.dev/docs/adding-typescript)
+
+```bash
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+```
+
+> Let's use styled-components for this project
+
+[ref typescript react styled-components](https://memostack.tistory.com/334)
+
+```bash
+npm i --save styled-components
+npm i --save-dev @types/styled-components
+```

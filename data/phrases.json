@@ -1,0 +1,101 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "subject": "Live in the New Life",
+      "title": "Christ the Center",
+      "text": "Therefore, if anyone is in Christ, he is a new creation; the old has gone, the new has come! ",
+      "address": "2 Corinthians 5:17"
+    },
+    {
+      "id": 2,
+      "subject": "Live in the New Life",
+      "title": "Christ the Center",
+      "text": "I have been crucified with Christ and I no longer live, but Christ lives in me. The life I live in the body, I live by faith in the Son of God, who loves me and gave Himself for me",
+      "address": "Galatians 2:20"
+    },
+    {
+      "id": 3,
+      "subject": "Live in the New Life",
+      "title": "Obedience to Christ",
+      "text": "Therefore, I urge you, brothers, in view of God’s mercy, to offer your bodies as living sacrifices, holy and pleasing to God-this is your spiritual act of worship",
+      "address": "Romans 12:1"
+    },
+    {
+      "id": 4,
+      "subject": "Live in the New Life",
+      "title": "Obedience to Christ",
+      "text": "Whoever has my commands and obeys them, he is the one who loves me. He who loves me will be loved by my Father, and I too will love him and show myself to him.",
+      "address": "John 14:21"
+    },
+    {
+      "id": 5,
+      "subject": "Live in the New Life",
+      "title": "The Word",
+      "text": "All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness",
+      "address": "2 Timothy 3:16"
+    },
+    {
+      "id": 6,
+      "subject": "Live in the New Life",
+      "title": "The Word",
+      "text": "Do not let this Book of the Law depart from your mouth; meditate on it day and night, so that you may be careful to do everything written in it. Then you will be prosperous and successful",
+      "address": "Joshua 1:8"
+    },
+    {
+      "id": 7,
+      "subject": "Live in the New Life",
+      "title": "Prayer",
+      "text": "If you remain in me and my words remain in you, ask whatever you wish, and it will be given you",
+      "address": "John 15:7"
+    },
+    {
+      "id": 8,
+      "subject": "Live in the New Life",
+      "title": "Prayer",
+      "text": "Do not be anxious about anything, but in everything, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus",
+      "address": "Philippians 4:6-7"
+    },
+    {
+      "id": 9,
+      "subject": "Live in the New Life",
+      "title": "Fellowship",
+      "text": "For where two or three come together in my name, there am I with them",
+      "address": "Matthew 18:20"
+    },
+    {
+      "id": 10,
+      "subject": "Live in the New Life",
+      "title": "Fellowship",
+      "text": "And let us consider how we may spur one another on toward love and good deeds. Let us not give up meeting together, as some are in the habit of doing, but let us encourage one another-and all the more as you see the Day approaching",
+      "address": "Hebrews 10:24-25"
+    },
+    {
+      "id": 11,
+      "subject": "Live in the New Life",
+      "title": "Witnessing",
+      "text": "Come, follow me, Jesus said, and I will make you fishers of men",
+      "address": "Matthew 4:19"
+    },
+    {
+      "id": 12,
+      "subject": "Live in the New Life",
+      "title": "Witnessing",
+      "text": "I am not ashamed of the gospel, because it is the power of God for the salvation of everyone who believes: first for the Jew, then for the Gentile.",
+      "address": "Romans 1:16"
+    }
+  ],
+
+  "todos": [
+    {
+      "id": 1,
+      "task": "Read the Bible",
+      "idDone": false
+    },
+    {
+      "id": 2,
+      "task": "Read the Bible",
+      "isDone": false
+    }
+  ]
+}
