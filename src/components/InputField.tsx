@@ -65,7 +65,8 @@ const InputField: React.FC<InputFieldProps> = ({todo, setTodo, addTodo}) => {
     <>
       <FormWrapper onSubmit={(e?:any) => {
         addTodo(e);
-        inputRef.current?.blur();
+        inputRef.current?.blur(); // blur the input field after submitting
+        inputRef.current?.focus(); // focus the input field after submitting
       }}>
         <InputWrapper ref={inputRef}
                       type="text" placeholder="Enter a task"

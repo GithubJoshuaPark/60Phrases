@@ -14,16 +14,22 @@ export interface SpanWrapperProps {
 
 export interface Phrase {
   id: number;
-  subject: string;
+  subject?: string;
   title?: string
-  text: string;
+  text?: string;
   address?: string;
 }
 
 export interface Todo {
   id: number;
-  task: string;
-  isDone: boolean;
+  task?: string;
+  isDone?: boolean;
+  isEdit?: boolean;
+
+  subject?: string;
+  title?: string
+  text?: string;
+  address?: string;
 }
 export interface InputFieldProps {
   todo: string;
@@ -38,4 +44,6 @@ export interface ToDoListProps {
 
 export interface ToDoItemProps {
   todo: Todo;
+  todos: Todo[];
+  setTodos: Dispatch<SetStateAction<Todo[]>>;
 }

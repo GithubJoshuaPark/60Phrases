@@ -13,12 +13,16 @@ let appUser: User  = {
   remark: '60 Phrases'
 };
 
-const SpanWrapper = styled.span<SpanWrapperProps>`
+const SpanTitleWrapper = styled.span<SpanWrapperProps>`
+  width: 90%;
   padding: 1rem;
   margin-top: 1rem;
   /* background-color: ${props => props.user.isStudent ? 'green' : 'red'}; */
+  /* background-color: rgba(255, 160, 26, 0.433); */
+  border-radius: 20px;
   font-size: 3rem;
-  color: whitesmoke;
+  color: rgba(255, 160, 26, 0.9);
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 `;
 
 const App: React.FC = () =>  {
@@ -43,7 +47,7 @@ const App: React.FC = () =>  {
       maxId = 1;
     }
 
-    const newTodo: Todo = { id: maxId, task: todo, isDone: false };
+    const newTodo: Todo = { id: maxId, task: todo, isDone: false, isEdit: false };
     if(todo) {
       setTodos([...todos, newTodo]);
       setTodo('');
@@ -56,8 +60,13 @@ const App: React.FC = () =>  {
 
   return (
     <div className="App">
-      <SpanWrapper user={appUser}>{appUser?.remark}</SpanWrapper>
+      {/* title */}
+      <SpanTitleWrapper user={appUser}>{appUser?.remark}</SpanTitleWrapper>
+
+      {/* input, search btn */}
       <InputField todo={todo} setTodo={setTodo} addTodo={addTodo} />
+
+      {/* toDo list */}
       <ToDoList todos={todos} setTodos={setTodos} />
     </div>
   );

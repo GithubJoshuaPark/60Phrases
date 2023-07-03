@@ -1,14 +1,13 @@
-import React from 'react'
-import {ToDoItemProps} from '../types/consref'
-import styled from 'styled-components'
+import React, { useState } from "react";
+import { ToDoItemProps } from "../types/consref";
+import styled from "styled-components";
 
-import CheckIcon from '@mui/icons-material/Check';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import CheckIcon from "@mui/icons-material/Check";
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import EditIcon from "@mui/icons-material/Edit";
 
-
-
-const DivWrap = styled.div`
+const FormWrap = styled.form`
   width: 90%;
   background-color: rgba(162, 159, 154, 0.568);
   margin-top: 10px;
@@ -20,29 +19,83 @@ const DivWrap = styled.div`
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
-const IconWrap = styled.div`
+const DivForIconWrap = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  color: #fff;
-`
 
-const ToDoItem:React.FC<ToDoItemProps> = ({todo}) => {
+  color: whitesmoke;
+`;
+
+const SpanWrapForIdDone = styled.span<ToDoItemProps>`
+  color: ${(props) => (props.todo.isDone ? "tomato" : "red")};
+  font-weight: bolder;
+`;
+
+const ToDoItem: React.FC<ToDoItemProps> = ({ todo, todos, setTodos }) => {
+  /**
+   * find todo with id and toggle isDone
+   * @param id
+   */
+  const handleDone = (id: number) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, isDone: !todo.isDone };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
+  /**
+   *
+   * @param id
+   */
+  const editTodo = (id: number) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, task: prompt("Edit Todo", todo.task) ?? "" };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
+  /**
+   *
+   * @param id
+   */
+  const deleteTodo = (id: number) => {
+    // filter out todo with id
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+
   return (
-    <>
-      <DivWrap>
-        <span>{todo.task}</span>
-        <IconWrap>
-          <span>{todo.isDone ? (<CheckIcon/>) : (<RadioButtonUncheckedIcon/>)}</span>
-          <span><DeleteForeverIcon/></span>
-        </IconWrap>
-      </DivWrap>
-    </>
-  )
-}
+    <FormWrap>
+      <span>{todo?.task}</span>
+      <DivForIconWrap>
+        <SpanWrapForIdDone todo={todo} todos={todos} setTodos={setTodos}>
+          {todo.isDone ? (
+            <CheckIcon onClick={() => handleDone(todo.id)} />
+          ) : (
+            <RadioButtonUncheckedIcon onClick={() => handleDone(todo.id)} />
+          )}
+        </SpanWrapForIdDone>
+        <span>
+          <EditIcon onClick={() => editTodo(todo.id)} />
+        </span>
+        <span>
+          <DeleteForeverIcon onClick={() => deleteTodo(todo.id)} />
+        </span>
+      </DivForIconWrap>
+    </FormWrap>
+  );
+};
 
-export default ToDoItem
+export default ToDoItem;
